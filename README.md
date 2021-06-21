@@ -1,5 +1,5 @@
 # WebServer
-用C++实现的WEB服务器，经过webbenchh压力测试可以实现上万的QPS
+用C++实现的简易WEB服务器，经过webbenchh压力测试可以实现上万的并发连接。
 
 ## 功能
 * 利用Epoll与线程池实现多线程的Reactor高并发模型；
@@ -8,8 +8,6 @@
 * 基于小根堆实现的定时器，关闭超时的非活动连接；
 * 利用单例模式与阻塞队列实现异步的日志系统，记录服务器运行状态；
 * 实现数据库连接池、用户注册登录功能。
-
-* 增加logsys,threadpool测试单元(todo: timer, sqlconnpool, httprequest, httpresponse) 
 
 ## 环境要求
 * Linux
@@ -75,6 +73,3 @@ make
 ```bash
 ./webbench-1.5/webbench -c 10000 -t 10 http://ip:port/
 ```
-* 测试环境: Ubuntu:19.10 cpu:i5-8400 内存:8G 
-* QPS 10000+
-
